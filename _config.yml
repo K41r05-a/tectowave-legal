@@ -1,0 +1,13 @@
+title: TectoWave
+description: Privacy policy and contact pages for the TectoWave Android app
+theme: null
+plugins: []
+permalink: /:path/
+exclude:
+  - README.md
+  - .github
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
