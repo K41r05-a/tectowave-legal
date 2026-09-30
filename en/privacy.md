@@ -2,12 +2,12 @@
 title: "Privacy Policy"
 lang: en
 permalink: /en/privacy/
-date: 2026-09-29
+date: 2026-09-30
 ---
 
 # Privacy Policy
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 TectoWave - Android app.
 
@@ -20,7 +20,7 @@ This Privacy Policy applies to the TectoWave Android application ("the App"). Th
 - The App has no backend and no user accounts. No data from the App reaches a server we run, and we do not receive personal data from you.
 - The App downloads public earthquake and tsunami data from USGS, EMSC, GEOFON and NOAA. These requests contain no personal data.
 - Maps in the App are drawn by the Google Maps SDK. While a map is on screen, Google receives the map area shown, which can include the approximate centre of one of your watch zones. The SDK also sends Google its own technical data: device details, a pseudonymous SDK identifier, crash reports and map interactions. See "Google Maps" below.
-- Everything else, including your watch zones and settings, stays on your device.
+- Everything else, including your watch zones and settings, stays on your device. The one exception is the language you pick on Android 13 and later, which Android keeps and may back up itself; see "On-device data".
 
 ## What we don't collect
 
@@ -42,7 +42,7 @@ This Privacy Policy applies to the TectoWave Android application ("the App"). Th
 
 ## Network requests
 
-The App makes HTTPS requests to the public data sources below: in the background, at most every 15 minutes while a network is available, and when the App refreshes the feed. The requests contain no request body, no account, no user identifier and no location: only a start time and fixed options. Each request carries a User-Agent header with the App name, its version and the address of our contact page, so that data operators can reach us. The servers may log the IP address and User-Agent as part of normal operation; this is outside our control, and we do not receive those logs.
+The App makes HTTPS requests to the public data sources below: in the background about every 15 minutes while a network is available (Android may run this check less often to save battery, and after a failed check the App retries up to three times, waiting 5, 10 and 15 minutes between attempts), and when the App refreshes the feed. The requests contain no request body, no account, no user identifier and no location: only a start time and fixed options. Each request carries a User-Agent header with the App name, its version and the address of our contact page, so that data operators can reach us. The servers may log the IP address and User-Agent as part of normal operation; this is outside our control, and we do not receive those logs.
 
 - **USGS** - public earthquake data from the U.S. Geological Survey, `https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson`. USGS privacy policy: <https://www.usgs.gov/privacy>.
 - **EMSC** - public earthquake records from the European-Mediterranean Seismological Centre event service at `https://www.seismicportal.eu`.
@@ -80,13 +80,12 @@ The feed, settings and notifications do not show a map. If you do not open the M
 
 - Cached public data (Room database): earthquake records from USGS, EMSC and GEOFON, deleted after about 26 hours, and NOAA tsunami bulletins.
 - Your settings (Android DataStore and app preferences):
-  - watch zones, up to 10: name, centre (rounded to about 1.1 km before it is saved), radius, minimum magnitude, and whether notifications are on;
-  - the minimum magnitude for notifications (the "Notify from magnitude" setting);
-  - the language chosen in the App;
+  - watch zones, the places the App notifies you about, up to 10: name, centre (rounded to about 1.1 km before it is saved), radius, minimum magnitude, and whether notifications are on;
+  - the language chosen in the App (on Android 13 and later Android stores it as the App's language setting; see below);
   - whether onboarding was finished and whether the notification and location permission requests were shown;
   - the time of the last successful refresh and the tsunami bulletins you were already notified about.
-- None of this is sent to us or to anyone else, except that zone centres can be part of the map area Google receives (see "Google Maps").
-- Android backup and device-to-device transfer are turned off for the App, so this data is not copied to cloud backups or to a new phone.
+- None of this is sent to us, and none of it leaves the device, except that zone centres can be part of the map area Google receives (see "Google Maps") and the language setting described in the next point.
+- Android backup and device-to-device transfer are turned off for the App's data, so the list above is not copied to cloud backups or to a new phone. One exception: on Android 13 and later, the language you pick is kept by Android as the App's language setting (also shown in System Settings → Apps → TectoWave → Language), and Android's own backup of device settings can restore it on a new phone.
 - Uninstalling the App removes all of this data.
 - Manual reset: System Settings → Apps → TectoWave → Storage → Clear data.
 
