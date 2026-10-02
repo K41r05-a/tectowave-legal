@@ -2,12 +2,12 @@
 title: "Privacy Policy"
 lang: en
 permalink: /en/privacy/
-date: 2026-09-30
+date: 2026-10-02
 ---
 
 # Privacy Policy
 
-Last updated: 2026-09-30
+Last updated: 2026-10-02
 
 TectoWave - Android app.
 
@@ -19,7 +19,7 @@ This Privacy Policy applies to the TectoWave Android application ("the App"). Th
 
 - The App has no backend and no user accounts. No data from the App reaches a server we run, and we do not receive personal data from you.
 - The App downloads public earthquake and tsunami data from USGS, EMSC, GEOFON and NOAA. These requests contain no personal data.
-- Maps in the App are drawn by the Google Maps SDK. While a map is on screen, Google receives the map area shown, which can include the approximate centre of one of your watch zones. The SDK also sends Google its own technical data: device details, a pseudonymous SDK identifier, crash reports and map interactions. See "Google Maps" below.
+- Maps in the App are drawn by the Google Maps SDK. While a map is on screen, Google receives the map area shown, which can include the approximate centre of one of your watch zones or, in the zone map picker, your approximate current position when it has just filled in the zone's point (with "My location", or by itself on the "Your first place" page of setup). The SDK also sends Google its own technical data: device details, a pseudonymous SDK identifier, crash reports and map interactions. See "Google Maps" below.
 - Everything else, including your watch zones and settings, stays on your device. The one exception is the language you pick on Android 13 and later, which Android keeps and may back up itself; see "On-device data".
 
 ## What we don't collect
@@ -36,7 +36,7 @@ This Privacy Policy applies to the TectoWave Android application ("the App"). Th
 
 - **`INTERNET`** - to download earthquake data from USGS, EMSC and GEOFON, tsunami bulletins from NOAA, and maps from Google.
 - **`ACCESS_NETWORK_STATE`** - to check connectivity, so that the background refresh runs only when a network is available.
-- **`ACCESS_COARSE_LOCATION`** (optional, asked at runtime) - your approximate position, used on your device only: to place a watch zone at your current position and to measure distances from where you are. The App gets it from Android's location service (Google Play services, under your device's location settings) and does not pass it on: not to us, not to the Google Maps SDK, not to anyone else. A zone created from it is saved like any other zone (see "On-device data"), and zone centres can be part of the map area Google receives (see "Google Maps").
+- **`ACCESS_COARSE_LOCATION`** (optional, asked at runtime) - your approximate position, used to place a watch zone at your current position and to measure distances from where you are. The App gets it from Android's location service (Google Play services, under your device's location settings) and does not send it to us or to anyone else, with one exception: when your current position has just filled in a zone's point (with "My location", or by itself on the "Your first place" page of setup) and you open the zone map picker, the map opens on that approximate position, so Google receives that map area (see "Google Maps"). A zone created from it is saved like any other zone (see "On-device data"), and zone centres can be part of the map area Google receives (see "Google Maps").
 - **`POST_NOTIFICATIONS`** (Android 13+, asked at runtime) - to show notifications that the App creates on your device. There are no remote push notifications.
 - **`RECEIVE_BOOT_COMPLETED`** - to schedule the background refresh again after the device restarts. No data is sent.
 
@@ -62,7 +62,7 @@ The App uses the Google Maps SDK for Android, provided by Google LLC, to show ma
 - the zone map picker, used to place a watch zone on a map;
 - the small map at the top of an event's details screen. Tapping an earthquake notification opens this screen.
 
-**Map area.** To draw a map, the SDK downloads map data for the area on screen, so Google receives that approximate area. The Map screen fits your watch zones and the listed events into view. The details map shows the event and, when your nearest watch zone is within 1,000 km of it, that zone's centre as well. In the zone map picker, it is the area you browse. Zone centres are saved rounded to about 1.1 km, so the map area can show approximately where one of your watch zones is. The App does not turn on the map's "my location" layer.
+**Map area.** To draw a map, the SDK downloads map data for the area on screen, so Google receives that approximate area. The Map screen fits your watch zones and the listed events into view. The details map shows the event and, when your nearest watch zone is within 1,000 km of it, that zone's centre as well. The zone map picker opens on the zone's point, or on the whole world when there is none, and then shows the area you browse. That point can be your approximate current position, just filled in with "My location" or by itself on the "Your first place" page of setup; it is not rounded until the zone is saved. Zone centres are saved rounded to about 1.1 km, so the map area can show approximately where one of your watch zones is. The App does not turn on the map's "my location" layer.
 
 **Data the SDK collects by itself.** Google documents that the Maps SDK for Android collects the following on its own, independently of the App's code (<https://developers.google.com/maps/documentation/android-sdk/play-data-disclosure>):
 
@@ -91,7 +91,7 @@ The feed, settings and notifications do not show a map. If you do not open the M
 
 ## Links and sharing
 
-Links you tap in the App (event pages, tsunami.gov, the USGS "Did You Feel It?" form, this policy) open in your browser, and the Share button hands the event text to the app you choose. Those sites and apps have their own privacy policies.
+Links you tap in the App (event pages, tsunami.gov, the USGS "Did You Feel It?" form, this policy) open in your browser, and the Share button hands the event text to the app you choose. When you have watch zones, that text includes the distance from your nearest watch zone and that zone's name. Those sites and apps have their own privacy policies.
 
 ## Children's privacy
 
